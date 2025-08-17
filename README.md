@@ -7,11 +7,7 @@ The next thing I wanted to do was to look at the distribution of the two classes
 * The distribution of the satisfied and non-satisfied customers were fairly evenly distributed (1 ~ 55% and 0 ~ 45%)
 * The scores were what I expected in that the satisfied customers had higher averages than the non-satisfied customers
 * The one thing that I found interesting and concerning, especially for a food delivery service, was that the question 'contents of my order was as I expected' averaged a score of ~ 2.5 for both classes of customers...something to look at going forward.
-<<<<<<< HEAD
 The last thing I wanted to check for was any correlation between features and with the highest correlation being in the low 40's I could safely say that all the features could be used in model experimentation.#
-=======
-The last thing I wanted to check for was any correlation between features and with the highest correlation being in the low 40's I could safely say that all the features could be used in model experimentation.
->>>>>>> 7b22b086d78db9629fab98e736984565f75c01f3
 
 ## Modeling
 With both classes being equally important to the company and their goal of predicting what makes customers satisfied, the recall metric was chosen as the best metric to track for model performance. 
@@ -37,7 +33,6 @@ Using Recursive Feature Elimination (RFE) and Recursive Feature Elimination Cros
 
 ## Conclusion
 After all was said and done the final analysis looked to be that a GaussianNB model with question 6 eliminated from the dataset looked to provide an adequate enough performance metric of ~80% and ~69% for the positive and negative class respectively and an ROC score of ~.76.
-<<<<<<< HEAD
 
 ### Setup
 
@@ -47,5 +42,3 @@ After all was said and done the final analysis looked to be that a GaussianNB mo
 - and then to install the dependencies for the notebook, run the command:
 `pip install -r requirements.txt`
 - for reproducability use a seed of 4213 in the models.ipynb notebook
-=======
->>>>>>> 7b22b086d78db9629fab98e736984565f75c01f3
