@@ -1,4 +1,5 @@
 # Customer Satisfaction
+
 This project looked to predict the satisfaction of customers of a food delivery service where the dataset was customers' survey responses; 6 features that corresponded to the 6 questions that they asked their customers with the answers being numeric values between 1 and 5 where 1 was a minimum satisfaction level and 5 was the maximum satisfaction level. Finding the most relevant features was a necessity as well so as to better evaluate the satisfaction of customers. 
 
 ## Exploratory Data Analysis
