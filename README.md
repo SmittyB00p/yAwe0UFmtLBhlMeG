@@ -23,6 +23,7 @@ Seen in the image above, the highest correlation of any predictor was in the low
 Since the correlation plot utilizes the Pearson correlation, which works well on continuous variables, we can use an ANOVA F-test to gain additional information on the usefulness of the predictors to our model.
 
 <!--  Insert p-vals from f_classif -->
+![ANOVA f-test p-values](/images/p-values.parquet)
 
 Comparing the p-values to the correlation heatmap above we can see that *'my order was delivered on time'* and *'I am satisfied with my courier'* are the two predictors that look to have significance in classifying satisfied and unsatisfied customers.
 
