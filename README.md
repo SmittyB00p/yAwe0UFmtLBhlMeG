@@ -23,14 +23,14 @@ Seen in the image above, the highest correlation of any predictor was in the low
 Since the correlation plot utilizes the Pearson correlation, which works well on continuous variables, we can use an ANOVA F-test to gain additional information on the usefulness of the predictors to our model.
 
 <!--  Insert p-vals from f_classif -->
-|   | Feature                                | f-statistic         | p-value              |
-|---|----------------------------------------|---------------------|----------------------|
-| 0 | my order was delivered on time         | 10.561708467842157  | 0.001486386824045104 |
-| 4 | I am satisfied with my courier         | 6.5826903496397575  | 0.01148805555119031  |
-| 5 | the app makes ordering easy            | 3.58689768005047    | 0.06056651807995719  |
-| 2 | I ordered everything I wanted to order | 2.886975954772599   | 0.09180590776658196  |
-| 3 | I paid good price for my order         | 0.5166974960654367  | 0.47360621658268376  |
-| 1 | contents of my order was as I expected | 0.07308433330563574 | 0.787347251607012    |
+| Feature                                | f-statistic         | p-value              |
+|----------------------------------------|---------------------|----------------------|
+| my order was delivered on time         | 10.561708467842157  | 0.001486386824045104 |
+| I am satisfied with my courier         | 6.5826903496397575  | 0.01148805555119031  |
+| the app makes ordering easy            | 3.58689768005047    | 0.06056651807995719  |
+| I ordered everything I wanted to order | 2.886975954772599   | 0.09180590776658196  |
+| I paid good price for my order         | 0.5166974960654367  | 0.47360621658268376  |
+| contents of my order was as I expected | 0.07308433330563574 | 0.787347251607012    |
 
 Comparing the p-values to the correlation heatmap above we can see that *'my order was delivered on time'* and *'I am satisfied with my courier'* are the two predictors that look to have significance in classifying satisfied and unsatisfied customers.
 
