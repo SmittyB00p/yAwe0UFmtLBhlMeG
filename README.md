@@ -16,7 +16,7 @@ The initial phase of the project looked to see that the values of the questions 
 From there it was on to look at both a pairwise plot and correlation plot to check for correlations between features and the target as well as colinearity between variables. Plotting each question in regards to the satisfaction category via boxplots one can see that most of the questions have significant overlap between categories and that most have few answers that equal 1.
 
 <!-- Insert Correlation graph here-->
-![Correlation Matrix](correlation_matrix.png)
+![Correlation Matrix](/images/correlation_matrix.png)
 
 Seen in the image above, the highest correlation of any predictor was in the low 40's and there are two predictors that are near 0. At first glance it seems like the two that are near 0 will unlikely be useful, but additional exploration should be done.
 
@@ -30,7 +30,7 @@ Comparing the p-values to the correlation heatmap above we can see that *'my ord
 The next thing was to look at the distribution of the two classes and to also see if there were any differences between their average and median scores.
 
 <!-- Insert Distribution Graph here -->
-![Target Dist](target_distribution.png)
+![Target Dist](/images/target_distribution.png)
 
 * The distribution of the satisfied and non-satisfied customers were fairly evenly distributed (1 ~ 55% and 0 ~ 45%)
 * The scores were what I expected in that the satisfied customers had higher averages than the non-satisfied customers
