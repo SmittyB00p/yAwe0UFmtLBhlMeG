@@ -1,6 +1,6 @@
 # Customer Satisfaction
 
-This project looked to predict the satisfaction of customers of a food delivery service. The dataset is customer survey responses to 6 questions that serve as the predictor variables with the answers being numeric values between 1 and 5 where 1 was a minimum satisfaction level and 5 being the maximum satisfaction level. 
+This project looked to predict the satisfaction of customers of a food delivery service. The dataset is customer survey responses to 6 questions that serve as the predictor variables with the answers being numeric values between 1 and 5 where 1 is a minimum satisfaction level and 5 the maximum satisfaction level. 
 
 Main Goal:
 * To reach a 73%+ accuracy level
@@ -50,21 +50,43 @@ Looking at the average difference of scores-per-question between those satisfied
   Since there might be interactions between variables that we are not seeing it will be wise to use non-parametric models, such as tree based or ensemble models or other linear models that can account for non-linearity in the features, but that will be for the model exploration phase, which is next.
 
 ## Modeling
-Using a random seed that roughly split the train and test vectors into equal distributions on the target variable (as mentioned above) I was able to expediate the process of picking a handful of methods to explore by using `LazyPredictClassifier`. The methods that yielded the best results were tree based models indicating that there is in fact some non-linearity in the dataset that we are not seeing right-off-the-bat. We will explore those models, but before that, let us turn to more basic models to see what they yield.
+Using a random seed that roughly split the train and test vectors into equal distributions on the target variable (as mentioned above) I was able to expediate the process of picking a handful of methods to explore by using `LazyPredictClassifier`. 
 
-  * Logistic Regression - Using both l1 and l2 normalization
-  * QuadraticDiscriminantAnalysis - More flexible than Logistic Regression
-  * SVC - 
-  * Decision Trees, Random Forest and Bagging - Highly interpretable models to explore the non-linearity that is evidently present.
-  * SGD and XGBoost - Tree based but ____
+The methods that yielded the best results were tree based models indicating that there is in fact some non-linearity in the dataset that we are not seeing right-off-the-bat. We will explore those models, but before that, let us turn to more basic models to see what they yield.
 
-Results will be posted soon
+  * Logistic Regression
+  * QuadraticDiscriminantAnalysis
+  * SVC
+  * Decision Trees, Random Forest and Bagging
+  * SGD and XGBoost
+
+<!-- Insert model scores here -->
+<!-- ![Models Scores](/images/) -->
+
+
 
 ## Feature Elimination
-Results will be posted soon
+
+<!-- Insert features graph here -->
+<!-- ![Used Features](/images/) -->
+
+<!-- The above bar graph shows the features that were selected by the models chosen for experimentation.
+
+We can see that the most used feature was *'my order was delivered on time'* followed by *'I am satisfied with my courier'* and thirdly, for all intensive purposes *'the app makes ordering easy'*. This validates our initial hypothesis from the exploratory data phase and gives us justification in saying that the question that can be dropped from the next survey is that of *'I paid good price for my order'*. -->
 
 ## Conclusion
-Conclusion coming soon!
+
+<!-- Main Goal:
+* Achieve 73%+ accuracy score
+
+Achieved:
+* From the ______ model we achieved a _______ score which _______ our original goal.
+
+Secondary Goal:
+* Find most relevant features
+
+Achieved:
+* A confirmation that the two features that were most heavily used in classifying customers were *'my order was delivered on time'* and *'I am satisfied with my courier'*. And a justification in dropping the question *'I paid good price for my order'* from the next survey. -->
 
 ### Setup
 - create a virtual environment (venv) with any name (customary to use .venv for virtual environment name):
