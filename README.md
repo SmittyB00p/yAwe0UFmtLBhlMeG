@@ -50,31 +50,28 @@ Looking at the average difference of scores-per-question between those satisfied
   Since there might be interactions between variables that we are not seeing it will be wise to use non-parametric models, such as tree based or ensemble models or other linear models that can account for non-linearity in the features, but that will be for the model exploration phase, which is next.
 
 ## Modeling
-Using a random seed that roughly split the train and test vectors into equal distributions on the target variable (as mentioned above) I was able to expediate the process of picking a handful of methods to explore by using LazyPredictClassifier. The methods that yielded the best results were tree based models indicating that there is in fact some non-linearity in the dataset that we are not seeing right-off-the-bat. We will explore those models, but before that, let us turn to more basic linear models to see what they yield.
-  * Logistic Regression - Using l1 and l2 normalization we can look at the coefficients of the models and see which features are influencing the model.
+Using a random seed that roughly split the train and test vectors into equal distributions on the target variable (as mentioned above) I was able to expediate the process of picking a handful of methods to explore by using `LazyPredictClassifier`. The methods that yielded the best results were tree based models indicating that there is in fact some non-linearity in the dataset that we are not seeing right-off-the-bat. We will explore those models, but before that, let us turn to more basic models to see what they yield.
+
+  * Logistic Regression - Using both l1 and l2 normalization
   * QuadraticDiscriminantAnalysis - More flexible than Logistic Regression
   * SVC - 
   * Decision Trees, Random Forest and Bagging - Highly interpretable models to explore the non-linearity that is evidently present.
   * SGD and XGBoost - Tree based but ____
 
-The models that performed the best in that iterative process of finding the seed were GaussianNB, LinearSVC, XGBoost, and RandomForest. Those models were used in two ensemble techniques - Voting and Stacking - as well as hyper-parameter tuned for further exploration and evaluation. 
-- The GaussianNB and LinearSVC models were the top performers after this process with ~ 80% recall scores for both classes
-
-Hyperopt was used on the Random Forest and XGBoost models with the Random Forest model performing the best of the two with ~ 67% and ~ 80% for the positive and negative classes repectively
+Results will be posted soon
 
 ## Feature Elimination
-The last task was to see what features were necessary for modeling purposes and which ones needed to be eliminated from the dataset as well as thrown out of the questionaire.
-
-Using Recursive Feature Elimination (RFE) and Recursive Feature Elimination Cross Validation (RFECV) I was able to see that 4,5, or 6 questions were the most the model needed. After further exploration, question 6 was by far the least likely feature to make a difference in the model and question 1 was the next, but one could make an argument for keeping the feature in the dataset using the RFECV approach.
+Results will be posted soon
 
 ## Conclusion
-After all was said and done the final analysis looked to be that a GaussianNB model with question 6 eliminated from the dataset looked to provide an adequate enough performance metric of ~80% and ~69% for the positive and negative class respectively and an ROC score of ~.76.
+Conclusion coming soon!
 
 ### Setup
-
-- use Python 3.9.13 kernel when using notebook
+- create a virtual environment (venv) with any name (customary to use .venv for virtual environment name):
+  `python3.9 -m venv .venv`
 - to activate the virtual environment run the command:
-`source .venv/bin/activate`
+  `source .venv/bin/activate`
 - and then to install the dependencies for the notebook, run the command:
-`pip install -r requirements.txt`
-- for reproducability use a seed of 4213 in the models.ipynb notebook
+  `pip install -r requirements.txt`
+- use `.venv Python 3.9` kernel in notebooks
+- for reproducability use a seed of 5249 in all notebooks
