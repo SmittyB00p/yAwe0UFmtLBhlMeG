@@ -60,6 +60,8 @@ The methods that yielded the best results were tree based models indicating that
   * Decision Trees, Random Forest and Bagging
   * SGD and XGBoost
 
+<!-- Using a combination of metrics, such as recall (for satisfied customer classification), precision (for unsatisfied customer classification), as well as accuracy (overall model performance) we were able to see that ________ was the top performer. -->
+
 <!-- Insert model scores here -->
 <!-- ![Models Scores](/images/) -->
 
@@ -68,25 +70,25 @@ The methods that yielded the best results were tree based models indicating that
 ## Feature Elimination
 
 <!-- Insert features graph here -->
-<!-- ![Used Features](/images/) -->
+![Used Features](/images/features_by_model.png)
 
-<!-- The above bar graph shows the features that were selected by the models chosen for experimentation.
+The above bar graph shows the features that were selected by the models chosen for experimentation.
 
-We can see that the most used feature was *'my order was delivered on time'* followed by *'I am satisfied with my courier'* and thirdly, for all intensive purposes *'the app makes ordering easy'*. This validates our initial hypothesis from the exploratory data phase and gives us justification in saying that the question that can be dropped from the next survey is that of *'I paid good price for my order'*. -->
+We can see that three of the models chose *'my order was delivered on time'* as their most important feature and two of the models selected *'I am satisfied with my courier'* as their second most important feature. This validates our initial hypothesis from the exploratory data phase and gives us justification in saying that the question that can be dropped from the next survey is that of *'I paid good price for my order'*.
 
 ## Conclusion
 
-<!-- Main Goal:
+Main Goal:
 * Achieve 73%+ accuracy score
 
 Achieved:
-* From the ______ model we achieved a _______ score which _______ our original goal.
+* Using a ______ model we achieved a _______ score which _______ our original goal.
 
 Secondary Goal:
 * Find most relevant features
 
 Achieved:
-* A confirmation that the two features that were most heavily used in classifying customers were *'my order was delivered on time'* and *'I am satisfied with my courier'*. And a justification in dropping the question *'I paid good price for my order'* from the next survey. -->
+* A confirmation that the two features that were most heavily used in classifying customers were *'my order was delivered on time'* and *'I am satisfied with my courier'*. And a justification in dropping the question *'I paid good price for my order'* from the next survey.
 
 ### Setup
 - create a virtual environment (venv) with any name (customary to use .venv for virtual environment name):
