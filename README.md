@@ -60,11 +60,23 @@ The methods that yielded the best results were tree based models indicating that
   * Decision Trees, Random Forest and Bagging
   * SGD and XGBoost
 
-<!-- Using a combination of metrics, such as recall (for satisfied customer classification), precision (for unsatisfied customer classification), as well as accuracy (overall model performance) we were able to see that ________ was the top performer. -->
+Using a combination of metrics, such as recall (for true satisfied customers actually predicted), precision (fraction of true positives among all positive predictions), as well as accuracy (overall model performance) we were able to achieve an accuracy, recall, and precision score all over 84%.
 
 <!-- Insert model scores here -->
-<!-- ![Models Scores](/images/) -->
-
+| Model                   | Parameters Tuned |         Score    | Precsion | Recall   |
+|-------------------------|------------------|------------------|----------|----------|
+| Logistic Regression     | C                | Train	 0.620000	| 0.909091 | 0.602410 |
+|                         |                  | Test	   0.615385	| 0.928571 | 0.590909 |
+|                         |                  |                  |          |          |
+| SVC (Non-linear Kernel) | C, gamma, degree | Train	 0.960000	| 0.945455 | 0.981132 |
+|                         |                  | Test	   0.576923	| 0.571429 | 0.615385 |
+|                         |                  |                  |          |          |
+| Bagging (Random Forest) | max_depth,       | Train	 0.820000	| 0.836364 | 0.836364 |
+|                         | n_estimators     | Test	   0.538462	| 0.357143 | 0.625000 |
+|                         |                  |                  |          |          |
+| SGD                     | max_depth,       | Train	 0.960000	| 0.981818 | 0.947368 |
+|                         | n_estimators,    | Test	   0.846154	| 0.857143 | 0.857143 |
+|                         | learning_rate    |                  |          |          |
 
 
 ## Feature Elimination
@@ -82,7 +94,9 @@ Main Goal:
 * Achieve 73%+ accuracy score
 
 Achieved:
-* Using a ______ model we achieved a _______ score which _______ our original goal.
+* Using a Stochastic Gradient model we achieved over 84% on all metrics that we were measuring which beat our original goal by over 10%!
+
+* Using that model on the whole dataset, the model was able to achieve over a 94% accuracy score as well as being able to identify over 94% of TRUE predicted satisfied customers and TRUE satisified customers on the whole.
 
 Secondary Goal:
 * Find most relevant features
