@@ -1,12 +1,38 @@
 # Customer Satisfaction
+This project aims to assist a growing logistics and delivery start-up who works with several partners and makes on-demand delivery to their customers. As a growing start-up, it is necessary for them to measure the happiness of their customers. If they can predict what makes their customers happy, then they can take the correct steps in acting upon those results. This project looks to predict the satisfaction of customers of a food delivery service. 
 
-This project looked to predict the satisfaction of customers of a food delivery service. The dataset is customer survey responses to 6 questions that serve as the predictor variables with the answers being numeric values between 1 and 5 where 1 is a minimum satisfaction level and 5 the maximum satisfaction level. 
+The dataset is customer survey responses to 6 questions that serve as the predictor variables with the answers being numeric values between 1 and 5 where 1 is a minimum satisfaction level and 5 the maximum satisfaction level. 
 
 Main Goal:
 * To reach a 73%+ accuracy level
 
 Secondary Goal:
 * Find the most relevant features that encapsulate the majority of the information that is necessary to make informed predictions. 
+
+### A Brief Note on Project Structure
+This project is structured so that most of the exploratory data analysis, model selection, and model experimentation are housed in the `Notebooks` folder. 
+
+```
+- Root Directory
+  |
+  - Feature Importances
+    |
+    - features.ipynb (to test final model)
+  |
+  - Notebooks
+      |
+      - model_selection.ipynb (models to look at using LazyPredict)
+      - EDA
+          |
+          - eda.ipynb (initial data exploration)
+      |
+      - models (sequence of models looked at)
+          |
+          - logistic_regression.ipynb
+          - svc.ipynb
+          - dt.ipynb
+          - xgboost.ipynb
+```
 
 ## Exploratory Data Analysis
 
@@ -112,4 +138,4 @@ Achieved:
 - and then to install the dependencies for the notebook, run the command:
   `pip install -r requirements.txt`
 - use `.venv Python 3.9` kernel in notebooks
-- for reproducability use a seed of 5249 in all notebooks
+- for reproducability use a seed of `5249` in all notebooks
