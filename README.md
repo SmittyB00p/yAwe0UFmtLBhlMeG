@@ -37,9 +37,14 @@ This project is structured so that most of the exploratory data analysis, model 
 ## Exploratory Data Analysis
 
 ### Predictors
-The initial phase of the project looked to see that the values of the questions corresponded to the values that were laid out by the company (1-5) as well as check for missing values and ultimately look at the descriptive statistics.
+The initial phase of the project looked to see that the values of the questions corresponded to the values that were laid out by the company (1-5) as well as check for missing values and ultimately look at the descriptive statistics. All the values made sense and there were no missing values.
 
-From there it was on to look at both a pairwise plot and correlation plot to check for correlations between features and the target as well as colinearity between variables. Plotting each question in regards to the satisfaction category via boxplots one can see that most of the questions have significant overlap between categories and that most have few answers that equal 1.
+From there, it was on to look at both a pairwise plot and correlation plot to check for correlations between features and the target as well as colinearity between variables.
+
+<!-- Boxplots of questions per satisfaction level -->
+![Satisfaction Level Boxplots](/images/satisfaction_boxplots.png)
+
+Plotting each question in regards to the satisfaction level via boxplots one can see that most of the questions have significant overlap between categories and that most have few outliers (look at Notebooks/EDA/eda.ipynb for count of outliers).
 
 <!-- Insert Correlation graph here-->
 ![Correlation Matrix](/images/correlation_matrix.png)
@@ -86,11 +91,13 @@ The methods that yielded the best results were tree based models indicating that
   * Decision Trees, Random Forest and Bagging
   * SGD and XGBoost
 
-Using a combination of metrics, such as recall (for true satisfied customers actually predicted), precision (fraction of true positives among all positive predictions), as well as accuracy (overall model performance) we were able to achieve an accuracy, recall, and precision score all over 84%.
-
 <!-- Insert model scores here -->
-| Model                   | Parameters Tuned |         Score    | Precsion | Recall   |
+| Model                   | Parameters Tuned |       Accuracy   | Precsion | Recall   |
 |-------------------------|------------------|------------------|----------|----------|
+| SGD                     | max_depth,       | Train	 0.960000	| 0.981818 | 0.947368 |
+|                         | n_estimators,    | Test	   0.846154	| 0.857143 | 0.857143 |
+|                         | learning_rate    |                  |          |          |
+|                         |                  |                  |          |          |
 | Logistic Regression     | C                | Train	 0.620000	| 0.909091 | 0.602410 |
 |                         |                  | Test	   0.615385	| 0.928571 | 0.590909 |
 |                         |                  |                  |          |          |
@@ -99,10 +106,9 @@ Using a combination of metrics, such as recall (for true satisfied customers act
 |                         |                  |                  |          |          |
 | Bagging (Random Forest) | max_depth,       | Train	 0.820000	| 0.836364 | 0.836364 |
 |                         | n_estimators     | Test	   0.538462	| 0.357143 | 0.625000 |
-|                         |                  |                  |          |          |
-| SGD                     | max_depth,       | Train	 0.960000	| 0.981818 | 0.947368 |
-|                         | n_estimators,    | Test	   0.846154	| 0.857143 | 0.857143 |
-|                         | learning_rate    |                  |          |          |
+
+
+Using a combination of metrics, such as recall (for true satisfied customers actually predicted), precision (fraction of true positives among all positive predictions), as well as accuracy (overall model performance) we were able to achieve an accuracy, recall, and precision score all over 84%.
 
 
 ## Feature Elimination
