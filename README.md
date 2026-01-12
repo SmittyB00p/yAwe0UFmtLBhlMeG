@@ -91,6 +91,7 @@ The methods that yielded the best results were tree based and boosting models in
   * Decision Trees, Random Forest and Bagging
   * SGD and XGBoost
 
+#### Results
 <!-- Insert model scores here -->
 | Model                   | Parameters Tuned |       Accuracy   | Precsion | Recall   |
 |-------------------------|------------------|------------------|----------|----------|
