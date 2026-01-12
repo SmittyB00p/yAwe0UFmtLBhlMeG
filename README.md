@@ -83,7 +83,7 @@ Looking at the average difference of scores-per-question between those satisfied
 ## Modeling
 Using a random seed that roughly split the train and test vectors into equal distributions on the target variable (as mentioned above) I was able to expediate the process of picking a handful of methods to explore by using `LazyPredictClassifier`. 
 
-The methods that yielded the best results were tree based models indicating that there is in fact some non-linearity in the dataset that we are not seeing right-off-the-bat. We will explore those models, but before that, let us turn to more basic models to see what they yield.
+The methods that yielded the best results were tree based and boosting models indicating that there is in fact some non-linearity in the dataset that we are not seeing right-off-the-bat (see Notebooks/model_selection.ipynb for full list of models). We will explore those models, but before that, let us turn to more basic models to see what they yield.
 
   * Logistic Regression
   * QuadraticDiscriminantAnalysis
@@ -108,7 +108,7 @@ The methods that yielded the best results were tree based models indicating that
 |                         | n_estimators     | Test	   0.538462	| 0.357143 | 0.625000 |
 
 
-Using a combination of metrics, such as recall (for true satisfied customers actually predicted), precision (fraction of true positives among all positive predictions), as well as accuracy (overall model performance) we were able to achieve an accuracy, recall, and precision score all over 84%.
+Using a combination of metrics, such as recall (for true satisfied customers actually predicted), precision (fraction of true positives among all positive predictions), as well as accuracy (overall model performance) we were able to achieve an accuracy, recall, and precision score all over 84% with a Stochastic Gradient Descent model.
 
 
 ## Feature Elimination
