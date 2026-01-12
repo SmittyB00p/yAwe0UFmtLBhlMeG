@@ -129,7 +129,7 @@ Main Goal:
 Achieved:
 * Using a Stochastic Gradient model we achieved over 84% on all metrics that we were measuring which beat our original goal by over 10%!
 
-* Using that model on the whole dataset, the model was able to achieve over a 94% accuracy score as well as being able to identify over 94% of TRUE predicted satisfied customers and TRUE satisified customers on the whole.
+* Using that model on the whole dataset, the model was able to achieve an accuracy score, recall score, and precision score all above 95%!
 
 Secondary Goal:
 * Find most relevant features
